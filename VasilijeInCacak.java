@@ -1,24 +1,23 @@
 import java.util.*;
 
 public class VasilijeInCacak {
-    public static void main(String[] args){
-       Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-       int t = sc.nextInt();
+        int t = sc.nextInt();
 
-       while(t-- > 0){
-          int n = sc.nextInt();
-          int k = sc.nextInt();
-          int x = sc.nextInt();
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            long x = sc.nextLong();
 
-          int min_sum = (k*(k+1))/2 ;
-          int max_sum = (k*(2*n-k+1))/2 ;
+            long min_sum = (long) k * (k + 1) / 2;
+            long max_sum = (long) k * (2L * n - k + 1) / 2;
 
-          if(min_sum <= x && x <= max_sum)
-             System.out.println("Yes");
-          else
-             System.out.println("No");  
-
-       }
+            if (min_sum <= x && x <= max_sum)
+                System.out.println("Yes");
+            else
+                System.out.println("No");
+        }
     }
 }
